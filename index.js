@@ -1,9 +1,9 @@
 "use strict";
 const server = require('./src/server');
-const { db } = require('./src/auth/models/index-model');
+const { sequelize } = require('./src/auth/models/index-model');
 let port= process.env.PORT
 
-db
+sequelize
     .sync()
     .then(() => {
         server.listen(port, () => {
