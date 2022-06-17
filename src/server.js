@@ -48,5 +48,13 @@ app.get('/myorders', bearer, (req, res) => {
 app.use("*", notFoundHandler);
 app.use(errorHandler); 
 
-module.exports = app;
+// module.exports = app;
+module.exports = {
+    server: app,
+    start: (port) => {
+      app.listen(port, () => {
+        console.log(`Server Up on ${port}`);
+      });
+    },
+  };
 
