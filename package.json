@@ -4,16 +4,20 @@
   "description": "Authentication Server Phase 2: Token (Bearer) Authentication",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test jest --coverage --verbose",
+    "start": "NODE_ENV=production node index.js",
     "dev": "NODE_ENV=development nodemon index.js",
-    "start": "NODE_ENV=production node index.js"
+    "test": "NODE_ENV=test jest --coverage",
+    "init:config": "sequelize init:config",
+    "db:create": "sequelize db:create",
+    "watch": "NODE_ENV=development nodemon index.js",
+    "test:watch": "NODE_ENV=test jest --watchAll"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Esam-Ankir/bearer-auth.git"
   },
   "keywords": [],
-  "author": "Esam Ankir",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Esam-Ankir/bearer-auth/issues"
@@ -30,6 +34,9 @@
     "pg": "^8.7.3",
     "sequelize": "^6.20.1",
     "sqlite3": "^5.0.8",
-    "supertest": "^6.2.3"
+    "supertest": "^6.2.3",
+    "sequelize-cli": "^6.2.0",
+    "morgan": "^1.10.0",
+    "cors": "^2.8.5"
   }
 }
