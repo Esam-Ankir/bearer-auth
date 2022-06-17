@@ -10,6 +10,6 @@ sequelize
             console.log(`server is listening and running on port ${port}`);
         });
     })
-    .catch((e) => {
-        throw new Error("error in app");
-    });
+    // .catch((e) => {
+    //     throw new Error("error in app");
+    // });
